@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\pelanggan;
 
 class pelangganController extends Controller
 {
@@ -13,7 +14,8 @@ class pelangganController extends Controller
      */
     public function index()
     {
-        //
+        $pelanggan = pelanggan::all;
+        return view('pelanggan.index');
     }
 
     /**
